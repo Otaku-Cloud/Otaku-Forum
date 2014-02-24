@@ -7,7 +7,7 @@
 
 			$cid = $_GET['cid'];
 
-			if(loggedin() == true || isset($_SESSION['cid'])){
+			if(loggedin() == true && isset($_SESSION['cid'])){
 				$logged = " | <a href='create_topic.php?cid=".$cid."'>Create Topic</a>";
 			}else{
 				$logged = " | Please log in to create forum topics!";
